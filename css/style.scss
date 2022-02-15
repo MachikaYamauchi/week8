@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Lato:ital,wght@1,300&family=Pacifico&family=Rubik:wght@300&display=swap');
+
+@mixin center($align:flex-start) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: $align;
+}
+
+a {
+    color: darksalmon;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero {
+    background-image: url("../assets/Hero_image1.jpg");
+    height: 100vh;
+    background-position: top;
+    background-size: cover;
+    @include center(center);
+    margin-bottom: 50px;
+    h1 {
+        color: white;
+        font-size: 80px;
+        font-family: 'Abril Fatface', cursive;
+        color: white;
+        text-shadow: 0px 0px 4px rgba(0,0,0,0.44);
+        letter-spacing: 4px;
+    }
+    p {
+        color: white;
+    }
+    button {
+        background-color: rgb(243, 193, 187);
+        border-color: rgb(243, 193, 187);
+        padding: 20px;
+        border-radius: 10px;
+    }
+}
+
+.menu_wrapper {
+    padding: 0 25%;
+
+    .menu {
+        text-align: center;
+        font-family: 'Abril Fatface', cursive;
+        // font-family: 'Pacifico', cursive;
+        font-size: 25px;
+    }
+}
+
+
+
+.item_wrapper {
+    padding: 0 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    min-height: 500px;
+    border: 1px solid rgb(190, 190, 190);
+    .img_wrapper {
+        position: relative;
+        margin-bottom: 20px;
+        img {
+            width: 200px;
+            height: 200px;
+        }
+    }
+    .img_wrapper .active {
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        transition: 0.5s;
+    }
+    
+    .img_wrapper:hover .active {
+        opacity: 1;
+    }
+
+    .price {
+        font-weight: bolder;
+        font-size: 22px;
+        font-weight: 600;
+    }
+
+    .checked {
+        color: orange;
+    }
+
+    .cart_button {
+        background-color: salmon;
+        border-color: salmon;
+        padding: 10px;
+        border-radius: 10px;
+        margin-top: 10px;
+    }
+}
+
+
+
+
+
+
